@@ -122,7 +122,7 @@ router.put("/:id",verifyTokenAndAdmin, async (req, res) => {
 
   })
 
-router.delete("/:id", (req, res) => {
+router.delete("/:id", verifyTokenAndAdmin,(req, res) => {
     Product.findByIdAndRemove(req.params.id)
       .then((product) => {
         if (product) {
