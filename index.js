@@ -9,8 +9,8 @@ const port=process.env.PORT || 3000;
 const dotenv=require('dotenv')
 app.use(cors());
 app.options("*", cors());
-require("./src/db/conn")
-require("dotenv/config");
+//require("./src/db/conn")
+//require("dotenv/config");
 //middleware
 
 
@@ -25,7 +25,9 @@ app.use(morgan("tiny"));
 app.use(`/api/auth`,authRoutes);
 app.use(`/api/users`, usersRoutes);
 app.use(`/api/products`, productsRoutes);
-
+app.get("/",(req,res)=>{
+    res.status(200).json({message:"my own project"})
+})
 app.listen(port,()=>{
     console.log(`server is running at port no ${port}`);
 });
