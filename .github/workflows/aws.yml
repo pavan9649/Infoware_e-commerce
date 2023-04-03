@@ -2,7 +2,7 @@ name: actions file for nodejs code
 on:
   push:
     branches:
-      - "*"
+      - "main"
 jobs:
   initializing-and-testing-code:
     runs-on: ubuntu-latest
