@@ -21,7 +21,7 @@ jobs:
     needs: initializing-and-testing-code
     runs-on: ubuntu-latest
     steps:
-      - name: running the shell command for docker-compose up on fitbasix-stage
+      - name: running the shell command for docker-compose up on learn ci-cd
         uses: appleboy/ssh-action@master
         with:
           host: ${{secrets.INSTANCE_SSH_HOST_STAGE}}
