@@ -31,4 +31,5 @@ app.get("/",(req,res)=>{
 app.listen(port,()=>{
     console.log("-----------------------------------");
     console.log(`server is running at port on ${port}`);
+    console.log("-----------------------------------");
 });
