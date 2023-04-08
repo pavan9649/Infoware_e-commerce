@@ -29,5 +29,6 @@ app.get("/",(req,res)=>{
     res.status(200).json({message:"my own project"})
 })
 app.listen(port,()=>{
+    console.log("-----------------------------------");
     console.log(`server is running at port on ${port}`);
 });
